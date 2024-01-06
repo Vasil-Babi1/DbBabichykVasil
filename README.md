@@ -54,9 +54,9 @@
 SELECT sh.*, ne.*
 FROM ServiceHistory sh
 JOIN NetworkEquipment ne ON sh.service_id = ne.service_id;
-
+```
 Результат
 ![Виконання першого запиту 215517](https://github.com/Vasil-Babi1/DbBabichykVasil/assets/150590016/35f29edd-6a73-48ee-8fca-804c509db5ca)
-```
+
 
 
