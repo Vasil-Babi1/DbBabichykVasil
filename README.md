@@ -25,7 +25,7 @@
 |-------------|-----------|--------------------------|
 | ServiceID   | INT       | Первинний ключ           |
 | ServiceDate | DATE      | Дата обслуговування      |
-| ServiceDetails | VARCHAR | Деталі обслуговування    |
+| ServiceDetails | TEXT | Деталі обслуговування    |
 
 ### Таблиця `NetworkEquipment`
 
