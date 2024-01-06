@@ -46,3 +46,12 @@
 | Model       | VARCHAR   | Модель обладнання             |
 | OfficeID    | INT       | Ідентифікатор офісу, зовнішній ключ до таблиці `offices` |
 | ServiceID   | INT       | Ідентифікатор обслуговування, зовнішній ключ до таблиці `ServiceHistory` |
+
+### 5 Запитів до Бази Даних:
+### Запит 1: З'єднання таблиць ServiceHistory та NetworkEquipment
+
+```sql
+SELECT sh.*, ne.*
+FROM ServiceHistory sh
+JOIN NetworkEquipment ne ON sh.service_id = ne.service_id;
+
