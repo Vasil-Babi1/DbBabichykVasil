@@ -63,7 +63,7 @@ JOIN NetworkEquipment ne ON sh.service_id = ne.service_id;
 ### Запит 2. Вибірка інформації про мережеве обладнання, яке ще не отримувало 
 ### сервіс:
 
-```
+```sql
 SELECT * FROM NetworkEquipment WHERE service_id IS NULL;
 ```
 Результат
@@ -71,7 +71,7 @@ SELECT * FROM NetworkEquipment WHERE service_id IS NULL;
 
 ### Запит 3. Вибірка інформації про всі комп'ютерне обладнання у вказаному офісі:
 
-```
+```sql
 SELECT * FROM ComputerEquipment WHERE office_id = 213;
 ```
 Результат
@@ -79,7 +79,7 @@ SELECT * FROM ComputerEquipment WHERE office_id = 213;
 
 ### Запит 4. Отримання інформації про офіси та їхніх менеджерів:
 
-```
+```sql
 SELECT o.office_id, o.office_name, o.manager_id, 
 m.manager_name, m.contact_info
 FROM Offices o
@@ -91,7 +91,7 @@ JOIN OfficeManagers m ON o.manager_id = m.manager_id;
 ### Запит 5. Знаходження офісу з найбільшою кількістю загалом обладнанняя в 
 ### сервісі:
 
-```
+```sql
 SELECT office_id, COUNT(*) AS total_equipment_on_service
 FROM (
 SELECT office_id FROM ComputerEquipment WHERE service_id IS NOT 
